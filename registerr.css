@@ -1,0 +1,174 @@
+
+/* Carrusel */
+.carrusel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;      
+  height: 100vh;       
+}
+
+.carrusel div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slide 20s infinite;
+}
+
+/* Imagenes Carrusel */
+.carrusel div:nth-child(1) {
+  background-image: url("../img/ropa.jfif");
+  animation-delay: 0s;
+}
+.carrusel div:nth-child(2) {
+  background-image: url("../img/graff.jpeg");
+  animation-delay: 5s;
+}
+.carrusel div:nth-child(3) {
+  background-image: url("../img/city.jpeg");
+  animation-delay: 10s;
+}
+.carrusel div:nth-child(4) {
+  background-image: url("../img/fondo.jpeg");
+  animation-delay: 15s;
+}
+
+
+@keyframes slide {
+  0%   { opacity: 0; }
+  10%   { opacity: 1; }
+  25%  { opacity: 1; }
+  35%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+.container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.left {
+  flex: 1;
+  background-image: url(../img/ropa.jfif);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.left h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 20px;
+  color: #ccc;  
+}
+
+
+.btn {
+  background: linear-gradient(90deg, #3B3B3B, #000);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #000, #3B3B3B); /* invertimos los colores */
+  transform: scale(1.05); /* un pequeño zoom */
+}
+
+
+.right {
+  flex: 1;
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.social-login {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-login button {
+  border: 1px solid #ccc;
+  background: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  width: 45px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input[type=date]{
+  color: gray;
+}
