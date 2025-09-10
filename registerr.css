@@ -173,4 +173,5 @@ form input {
 
 input[type=date]{
   color: gray;
+  cursor: pointer;
 }
